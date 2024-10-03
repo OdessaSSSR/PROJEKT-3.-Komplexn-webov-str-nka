@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Amarante;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #222;
+  background-image: url(/image/clouds.jpg);
+  background-position: center;
+  background-size: contain;
+}
+
+.text-case {
+  width: 90%;
+  padding-top: 20px;
+  margin: auto;
+}
+.text-case h1,
+p {
+  text-align: center;
+  width: 100%;
+}
+h1 {
+  margin-bottom: 10px;
+}
+/* ---------  Header ----------  */
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  height: 70px;
+}
+
+/* -------- Navigace ---------- */
+
+nav {
+  margin: auto;
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 20px;
+}
+a {
+  text-decoration: none;
+  color: #0033cc;
+  font-size: 20px;
+}
+a:hover {
+  font-size: 30px;
+  color: rgb(205, 7, 34);
+  transition: 2s;
+}
+.menu-icon {
+  margin-right: 30px;
+  display: none;
+}
+
+/*---------- Tlačítko přepnutí režimu "světlý / tmavý"  ------------*/
+
+.button-case {
+  margin: auto;
+}
+.btn-toggle {
+  width: 120px;
+  height: 70px;
+
+  background-image: url(./image/button.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*---------------  Galerie  --------------*/
+
+.gallery {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+}
+.picture {
+  width: calc(100% / 3 - 20px / 3);
+}
+.image:hover {
+  transform: scale(1.5);
+  transition: transform 2.5s;
+  /* -------  Pro zvětšení a zmenšení obrázku 
+  existují také řešení v JavaScriptu - 
+  pomocí události "mouseenter" a "mouseleave"  -------*/
+}
+img {
+  width: 100%;
+  object-fit: contain;
+  margin: auto;
+  justify-content: center;
+}
+.about {
+  font-style: italic;
+  font-size: 12px;
+  text-align: none;
+}
+
+/* ---------------  Registrace  ------------- */
+
+.container {
+  position: relative;
+}
+h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  opacity: 0.7;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.error {
+  color: red;
+  font-size: 1.075rem;
+}
+.success {
+  color: green;
+  font-size: 1.275rem;
+}
+
+.cancelbtn {
+  background-color: #f44336;
+}
+
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container {
+  padding: 16px;
+  margin: auto;
+  width: 70%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*---------------  Potvrzení registrace --------------- */
+
+.confirmation {
+  display: none;
+  position: absolute;
+  border-radius: 3px;
+  top: 600px;
+  left: 9%;
+  background-image: url(/image/clouds.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80vw;
+  height: 450px;
+  color: light-dark(black, white);
+}
+
+.envelope {
+  text-align: center;
+}
+
+.alert {
+  margin: 10% 0 15% 0;
+}
+.close-button-case {
+  bottom: 10px;
+  padding: 10px;
+}
+.close {
+  background-color: #809fff;
+  width: 70px;
+  border: 1px double #f1f1f1;
+  border-radius: 30%;
+  margin: auto;
+}
+
+/* -------------- Tlačítko ZPĚT NAHORU ---------------- */
+
+.btn-up {
+  position: fixed;
+  background-color: #673ab7;
+  right: 20px;
+  bottom: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 50px;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #512da8;
+  }
+}
+.btn-up {
+  position: fixed;
+  background-color: #936ed3;
+  right: 20px;
+  bottom: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 50px;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+/*--------------  Footer  --------------*/
+
+.reference-buttons {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+.yes,
+.no {
+  width: 80px;
+  margin: auto;
+  border-radius: 3px;
+}
+.no {
+  background-color: red;
+}
+
+.no:hover {
+  opacity: 0;
+}
+.no:active {
+  opacity: 0;
+}
+/*--------   Stylování tmavého režimu  --------- */
+
+body.dark-theme {
+  color: #eee;
+  background-image: url(./image/stars.jpg);
+  background-position: center;
+  background-size: contain;
+}
+body.dark-theme a {
+  color: #627ac7;
+}

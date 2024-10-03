@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Vadym Drahý -->
+  <!-- VDrahy@volny.cz -->
+  <!-- Discord: Vadym D. -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amarante&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="query.css" />
+    <script
+      src="https://kit.fontawesome.com/2596e431c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Projekt 3.</title>
+  </head>
+  <body>
+    <header>
+      <!---------- Tlačítko přepnutí režimu "světlý / tmavý"  ------------>
+
+      <div class="button-case">
+        <button class="btn-toggle"></button>
+      </div>
+
+      <!----------- Navigace ------------->
+
+      <nav>
+        <ul>
+          <li><a href="#masterpiece">Galerie</a></li>
+          <li><a href="#auction">Aukce</a></li>
+          <li><a href="#reference">Recenze</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" style="color: #20a67e"></i>
+        <!-- <i class="fa-solid fa-xmark" style="color: #20a67e;"></i>-->
+      </div>
+    </header>
+
+    <!---------------- Invitation ----------------->
+
+    <div class="text-case">
+      <h1>Vítáme Vas v Hlubokém webu!</h1>
+      <p>
+        Pouze dnes a teprve nyní! <br />
+        Dovolte, abych vám představil několik nových úžasných obrazů vynikající
+        aspirující umělkyní. <br /><br />
+        Dámy a pánové, paní
+        <span style="color: rgb(254, 4, 4); font-size: larger"
+          >Irina Drahá</span
+        >
+        dává do aukce svá nová mistrovská díla.
+      </p>
+    </div>
+    <!---------------  Galerie  -------------->
+
+    <section class="gallery" id="masterpiece">
+      <div class="picture">
+        <div class="image">
+          <img src="/image/port.JPEG" alt="Kočka 1" />
+        </div>
+        <div class="description">
+          <p class="about">
+            Půvabný portrét roztomilé kočičky nenechá nikoho lhostejným. <br />
+            NB: Nejrozmanitější odstíny červené jsou vyrobeny pomocí barviva z
+            krve nevděčných diváků a neopatrných kritiků.
+          </p>
+        </div>
+        <div class="price">
+          <p><span style="color: red">10 000</span> Kč</p>
+        </div>
+      </div>
+      <div class="picture">
+        <div class="image">
+          <img src="/image/middle.JPEG" alt="Kočka 2" />
+        </div>
+        <div class="description">
+          <p class="about">
+            A ještě jeden kočičí portrét – skutečně, tato mladá umělkyně je
+            jedním z nejhlubších znalců kočičí duše v dnešní době.
+          </p>
+        </div>
+        <div class="price">
+          <p><span style="color: red">20 000</span> Kč</p>
+        </div>
+      </div>
+      <div class="picture">
+        <div class="image">
+          <img src="/image/starboard.JPEG" alt="Krajina" />
+        </div>
+        <div class="description">
+          <p class="about">
+            Nezapomenutelná krajina, vytvořená podle nejlepších tradic raného
+            impresionismu jižních čtvrtí Montmartru.
+          </p>
+        </div>
+        <div class="price">
+          <p><span style="color: red">30 000</span> Kč</p>
+        </div>
+      </div>
+    </section>
+
+    <!---------------  Registrace  ------------->
+
+    <section class="registration" id="auction">
+      <form style="border: 1px solid #ccc" id="registrationForm">
+        <div class="container">
+          <h2>Registrace</h2>
+          <p>Milostivě vyplníte formulář pro účast v aukci.</p>
+          <hr />
+
+          <label for="name"><b>Přihlašovací jméno</b></label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Vyberte si přihlašovací jméno"
+            name="login"
+            required
+          />
+
+          <label for="phone"><b>Telefonní číslo</b></label>
+          <input
+            type="text"
+            placeholder="Napíšte své telefonní číslo"
+            name="phone"
+            required
+          />
+
+          <label for="psw"><b>Heslo</b></label>
+          <input
+            class="pass-1"
+            type="password"
+            id="password"
+            placeholder="Vyberte si heslo"
+            name="psw"
+            required
+          />
+
+          <label for="psw-repeat"><b>Opakujte heslo</b></label>
+          <input
+            class="pass-2"
+            type="password"
+            id="confirmPassword"
+            placeholder="Opakujte heslo"
+            name="psw-repeat"
+            required
+          />
+
+          <span
+            id="passwordError"
+            class="error"
+            style="margin-bottom: 15px"
+          ></span>
+
+          <p class="condition" style="font-size: 8px">
+            Registrací na naší stránce se zavazujete koupit alespoň něco v
+            minimální hodnotě 10 000 Kč. <br />
+            V opačném případě vám bude z účtu stržena částka 10 000 eur.
+          </p>
+
+          <div class="clearfix">
+            <button type="reset" class="cancelbtn" id="cancelBtn">
+              Zrušit
+            </button>
+            <button type="submit" class="signupbtn" id="submitBtn">
+              Registrovat
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-----------------  Potvrzení registrace ----------------->
+
+      <div class="confirmation" id="confirmation">
+        <container class="envelope">
+          <p class="alert">
+            <span style="font-size: 24px; padding-top: 10%">Gratulujeme!</span>
+            <br /><br />
+            Registrace proběhla úspěšně. <br /><br />
+            Na uvedené telefonní číslo pošleme Vám čas a datům konání aukce.
+            <br />Pro přístup použijte vybrané Vámi heslo. <br /><br />
+            A nezapomeňte: podle pravidel naší aukce každý čtvrtý obrázek
+            dostanete <span style="color: red">zdarma</span>!
+          </p>
+          <div class="close-button-case">
+            <button type="reset" class="close">Zavřít</button>
+          </div>
+        </container>
+      </div>
+    </section>
+
+    <!-------------- Tlačítko ZPĚT NAHORU ---------------->
+
+    <div class="btn-up btn-up_hide"></div>
+
+    <!--------------  Footer  -------------->
+
+    <section class="how-do-you-like-it" id="reference">
+      <h2>Líbí se Vám naše stránka?</h2>
+
+      <div class="reference-buttons">
+        <button class="yes">Ano</button>
+        <button class="no">Ne</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

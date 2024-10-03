@@ -1,0 +1,66 @@
+/*----------- Navigace -------------*/
+
+@media (max-width: 620px) {
+  header {
+    position: relative;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    margin-top: 70px;
+    width: 30vw;
+    background-color: #9eb1c5;
+    left: 40vw;
+    top: 1px;
+  }
+  .menu-icon {
+    display: block;
+    color: rgb(20, 29, 67);
+    font-size: 25px;
+  }
+  header nav li {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .menu-icon:hover {
+    cursor: grab;
+  }
+}
+
+/*---------------  Galerie  --------------*/
+
+@media screen and (max-width: 620px) {
+  .picture {
+    width: 100%;
+  }
+}
+
+/*---------------  Potvrzení registrace --------------- */
+
+@media screen and (max-width: 620px) {
+  .confirmation {
+    left: 4%;
+    width: 90vw;
+    top: 1800px;
+  }
+}
+@media (max-width: 550px) {
+  .confirmation {
+    top: 1700px;
+  }
+}
+@media (max-width: 450px) {
+  .confirmation {
+    top: 1500px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
